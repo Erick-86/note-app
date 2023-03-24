@@ -1,7 +1,9 @@
 "use strict";
 
 //Bg Overlay
-const overlay = document.getElementById("overlay")
+//Confirm delete overlay
+const overlay = document.getElementById("overlay"),
+      confirmDelOverlay = document.getElementById("confirm-del-overlay")
 
 //Btn to add new note
 const addNoteBtn = document.getElementById("add-note-btn");
@@ -23,14 +25,25 @@ const noteTextarea = document.getElementById("note-textarea");
 
 //Save and Delete btns
 const saveBtn = document.getElementById("save-btn"),
-      delBtn = document.getElementById("del-btn");
-      
-//Open Note forms when the (+) icon is click
+  delBtn = document.getElementById("del-btn");
 
-addNoteBtn.addEventListener("click", addNewNoteModal)
+//Confirm delete modal
+const confirmDelModal = document.getElementById("confirm-del");
+
+
+//Open Note forms when the (+) icon is click
+addNoteBtn.addEventListener("click", addNewNoteModal);
 
 function addNewNoteModal() {
-    noteForms.classList.add('show-modal')
-    overlay.style.display = "block"
+  noteForms.classList.add("show-modal");
+  overlay.style.display = "block";
 }
 
+//Confirming Delete
+delBtn.addEventListener("click", confirmDelete);
+
+function confirmDelete() {
+    confirmDelModal.style.display = "block";
+    confirmDelOverlay.style.display = "block"
+    confirmDelOverlay.style.zIndex = 1
+}

@@ -7,7 +7,7 @@ const addNoteBtn = document.getElementById("add-note-btn");
 const noteForms = document.getElementById("note--form");
 
 //Header counter
-const headerCounter = document.getElementById("note--form");
+const headerCounter = document.getElementById("header-counter");
 
 //Note header input
 const noteHeader = document.getElementById("note-header");
@@ -21,3 +21,12 @@ const noteTextarea = document.getElementById("note-textarea");
 //Save and Delete btns
 const saveBtn = document.getElementById("save-btn"),
       delBtn = document.getElementById("del-btn");
+      
+//Open Note forms when the (+) icon is click
+
+addNoteBtn.addEventListener("click", addNewNoteModal)
+
+function addNewNoteModal() {
+    noteForms.classList.add('show-modal')
+}
+

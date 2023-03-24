@@ -27,7 +27,7 @@ body {
   height: 100vh;
 }
 
-main {
+.main-container {
   background-color: var(--very-pale-orange);
   border: 3px solid var(--pale-orange);
   width: 30rem;
@@ -39,15 +39,11 @@ main {
   align-items: center;
 }
 
-main .main-container {
-  height: inherit;
-  padding: 20rem 0;
-}
-
 main .container {
   display: flex;
   align-items: center;
   flex-direction: column;
+  height: inherit;
 }
 
 .container span {

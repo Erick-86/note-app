@@ -1,5 +1,8 @@
 "use strict";
 
+//Bg Overlay
+const overlay = document.getElementById("overlay")
+
 //Btn to add new note
 const addNoteBtn = document.getElementById("add-note-btn");
 

@@ -52,9 +52,9 @@ main .container {
   margin: 3rem 0 3rem;
 }
 
-.container span h1{
-    font-weight: 400;
-    font-size: 1.7rem;
+.container span h1 {
+  font-weight: 400;
+  font-size: 1.7rem;
 }
 
 .container .add-note--icon {
@@ -67,191 +67,192 @@ main .container {
   justify-content: center;
   border-radius: 50%;
   cursor: pointer;
-  transition: .2s ease;
+  transition: 0.2s ease;
 }
 
-.add-note--icon:hover{
-    color: var(--deep-orange);
-    transform: scale(1.1);
-    background-color: var(--pale-orange);
+.add-note--icon:hover {
+  color: var(--deep-orange);
+  transform: scale(1.1);
+  background-color: var(--pale-orange);
 }
 
-.add-note--icon i{
-    width: 102px;
+.add-note--icon i {
+  width: 102px;
 }
 
 /* Add note Forms */
-.add-note--form{
-    background-color: var(--almost-white);
-    border: var(--container-border);
-    width: 20rem;
-    padding: 1.5rem 2rem;
-    border-radius: 15px;
-    display: none;
+.add-note--form {
+  background-color: var(--almost-white);
+  border: var(--container-border);
+  width: 20rem;
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  display: none;
 }
 
-.add-note--form.show-modal{
-    display: block !important;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    /* margin: auto; */
-    transform: translate(-50%, 15%);
+.add-note--form.show-modal {
+  display: block !important;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  /* margin: auto; */
+  transform: translate(-50%, 15%);
 }
 
-.add-note--form .note-header--container{
-    display: flex;
-    flex-direction: column;
+.add-note--form .note-header--container {
+  display: flex;
+  flex-direction: column;
 }
 
-.add-note--form .label-and-char--count{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--deepest-orange);
-    margin-bottom: .5rem;
+.add-note--form .label-and-char--count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--deepest-orange);
+  margin-bottom: 0.5rem;
 }
 
-.note-header--container label{
-    font-size: 1.2rem;
+.note-header--container label {
+  font-size: 1.2rem;
 }
 
-.note-header--container input{
-    padding: .4rem .5rem;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    font-family: inherit;
-    background-color: var(--almost-white);
-    border: 2px solid var(--pale-orange);
-    border-radius: 3px;
-    transition: .3s ease;
-    margin-bottom: 2rem;
+.note-header--container input {
+  padding: 0.4rem 0.5rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-family: inherit;
+  background-color: var(--almost-white);
+  border: 2px solid var(--pale-orange);
+  border-radius: 3px;
+  transition: 0.3s ease;
+  margin-bottom: 2rem;
 }
 
-.note-header--container input:focus{
-    outline: red;
-    border: 2px solid var(--orange);
+.note-header--container input:focus {
+  outline: red;
+  border: 2px solid var(--orange);
 }
 
-.note-textarea-container textarea{
-    width: 100% !important;
-    resize: none;
-    border: 2px solid var(--pale-orange);
-    background-color: var(--almost-white);
-    font-size: 1.2rem;
-    font-family: inherit;
-    text-transform: capitalize;
-    padding: .3rem .5rem;
-    transition: .3s ease;
-    border-radius: 3px;
-    box-sizing: border-box;
+.note-textarea-container textarea {
+  width: 100% !important;
+  resize: none;
+  border: 2px solid var(--pale-orange);
+  background-color: var(--almost-white);
+  font-size: 1.2rem;
+  font-family: inherit;
+  text-transform: capitalize;
+  padding: 0.3rem 0.5rem;
+  transition: 0.3s ease;
+  border-radius: 3px;
+  box-sizing: border-box;
 }
 
-.note-textarea-container textarea:focus{
-    outline: red;
-    border: 2px solid var(--orange);
+.note-textarea-container textarea:focus {
+  outline: red;
+  border: 2px solid var(--orange);
 }
 
-.save-and-delete--btns{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-evenly;
-    margin-top: 1rem;
+.save-and-delete--btns {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  margin-top: 1rem;
 }
 
-.save-and-delete--btns .save-btn{
-    background-color: var(--deep-orange);
-    border: none;
-    padding: .6rem 2rem;
-    font-size: 1.2rem;
-    font-weight: 400;
-    font-family: inherit;
-    color: var(--almost-white);
-    text-transform: capitalize;
-    border-radius: 5px;
-    transition: .3s ease;
-    cursor: pointer;
+.save-and-delete--btns .save-btn {
+  background-color: var(--deep-orange);
+  border: none;
+  padding: 0.6rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: inherit;
+  color: var(--almost-white);
+  text-transform: capitalize;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  cursor: pointer;
 }
 
-.save-and-delete--btns .save-btn:hover{
-    background-color: var(--deepest-orange);
+.save-and-delete--btns .save-btn:hover {
+  background-color: var(--deepest-orange);
 }
 
-.save-and-delete--btns .delete-btn{
-    background-color: inherit;
-    border: none;
-    font-size: 1.2rem;
-    text-transform: capitalize;
-    color: var(--deep-orange);
-    cursor: pointer;
-    font-weight: 400;
-    font-family: inherit;
+.save-and-delete--btns .delete-btn {
+  background-color: inherit;
+  border: none;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  color: var(--deep-orange);
+  cursor: pointer;
+  font-weight: 400;
+  font-family: inherit;
 }
 
 /* OverLay */
 #overlay,
-#confirm-del-overlay{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: #49494942;
-    backdrop-filter: blur(1.8px);
-    display: none;
+#confirm-del-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #49494942;
+  backdrop-filter: blur(1.8px);
+  display: none;
 }
 
 /* ConfiRM Dlete note */
-.confirm-del{
-    display: none;
+.confirm-del {
+  display: none;
 }
 
-.confirm-del-container{
-    background-color: var(--almost-white);
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, 15%);
-    padding: 1.6rem 1.8rem;
-    border-radius: 8px;
-    border: 5px solid var(--deepest-orange);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.confirm-del-container {
+  background-color: var(--almost-white);
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, 15%);
+  padding: 1.6rem 1.8rem;
+  border-radius: 8px;
+  border: 5px solid var(--deepest-orange);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
 }
 
-.confirm-del h2{
-    margin: 0 0 1.8rem;
-    font-weight: 100;
-    color: var(--deepest-orange);
+.confirm-del h2 {
+  margin: 0 0 1.8rem;
+  font-weight: 100;
+  color: var(--deepest-orange);
 }
 
-.confirm-del button{
-    background-color: inherit;
-    border: none;
-    font-size: 1.5rem;
-    text-transform: capitalize;
-    margin: 0 2rem;
-    font-family: inherit;
-    cursor: pointer;
-    transition: .3s ease;
+.confirm-del button {
+  background-color: inherit;
+  border: none;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  margin: 0 2rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.confirm-del .confirm-del--yes{
-    color: var(--deep-orange);
-    font-weight: 100;
+.confirm-del .confirm-del--yes {
+  color: var(--deep-orange);
+  font-weight: 100;
 }
 
-.confirm-del--yes:hover{
-    color: var(--deepest-orange);
+.confirm-del--yes:hover {
+  color: var(--deepest-orange);
 }
 
-.confirm-del .confirm-del--no{
-    background-color: var(--deep-orange);
-    padding: .5rem 2.7rem;
-    border-radius: 5px;
-    color: var(--almost-white);
+.confirm-del .confirm-del--no {
+  background-color: var(--deep-orange);
+  padding: 0.5rem 2.7rem;
+  border-radius: 5px;
+  color: var(--almost-white);
 }
 
-.confirm-del--no:hover{
-    background-color: var(--deepest-orange);
+.confirm-del--no:hover {
+  background-color: var(--deepest-orange);
 }

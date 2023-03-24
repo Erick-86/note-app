@@ -32,19 +32,25 @@
       <div class="add-note--form">
         <div class="form-container">
           <div class="note-header--container">
-            <div>
+            <div class="label-and-char--count">
               <label for="note-header">Heading</label>
               <span>Max: <span class="header-count">20</span></span>
             </div>
-            <input type="text" id="note-header">
+            <input type="text" id="note-header" />
           </div>
 
           <div class="note-textarea-container">
-            <div>
+            <div class="label-and-char--count">
               <label for="note-textarea">Your Note</label>
               <span>Max: <span class="header-count">200</span></span>
             </div>
-            <textarea name="note-textarea" id="note-textarea" cols="30" rows="10"></textarea>
+            <textarea
+              name="note-textarea"
+              id="note-textarea"
+              cols="30"
+              rows="10"
+              oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'
+            ></textarea>
           </div>
         </div>
       </div>

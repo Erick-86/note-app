@@ -60,3 +60,11 @@ function deleteNote() {
     overlay.style.display = "none"
     noteForms.classList.remove("show-modal");
 }
+
+//Confirm Delete (no)
+confirmDelCanc.addEventListener("click", cancDeleteNote);
+
+function cancDeleteNote() {
+    confirmDelModal.style.display = "none";
+    confirmDelOverlay.style.display = "none";
+}

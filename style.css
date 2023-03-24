@@ -90,6 +90,15 @@ main .container {
     display: none;
 }
 
+.add-note--form.show-modal{
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    /* margin: auto; */
+    transform: translate(-50%, 15%);
+}
+
 .add-note--form .note-header--container{
     display: flex;
     flex-direction: column;

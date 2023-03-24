@@ -52,8 +52,12 @@ main .container {
 
 .container span {
   text-align: center;
-  font-size: 1rem;
   margin: 3rem 0 3rem;
+}
+
+.container span h1{
+    font-weight: 400;
+    font-size: 1.7rem;
 }
 
 .container .add-note--icon {

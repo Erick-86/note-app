@@ -38,6 +38,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  display: none;
 }
 
 main .container {
@@ -78,4 +79,66 @@ main .container {
 
 .add-note--icon i{
     width: 102px;
+}
+
+/* Add note Forms */
+.add-note--form{
+    background-color: var(--almost-white);
+    border: var(--container-border);
+    width: 20rem;
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+}
+
+.add-note--form .note-header--container{
+    display: flex;
+    flex-direction: column;
+}
+
+.add-note--form .label-and-char--count{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--deepest-orange);
+    margin-bottom: .5rem;
+}
+
+.note-header--container label{
+    font-size: 1.2rem;
+}
+
+.note-header--container input{
+    padding: .4rem .5rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: inherit;
+    background-color: var(--almost-white);
+    border: 2px solid var(--pale-orange);
+    border-radius: 3px;
+    transition: .3s ease;
+    margin-bottom: 2rem;
+}
+
+.note-header--container input:focus{
+    outline: red;
+    border: 2px solid var(--orange);
+}
+
+.note-textarea-container textarea{
+    width: 100% !important;
+    resize: none;
+    border: 2px solid var(--pale-orange);
+    background-color: var(--almost-white);
+    font-size: 1.2rem;
+    font-family: inherit;
+    text-transform: capitalize;
+    padding: .3rem .5rem;
+    transition: .3s ease;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.note-textarea-container textarea:focus{
+    outline: red;
+    border: 2px solid var(--orange);
 }

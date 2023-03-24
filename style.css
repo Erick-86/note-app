@@ -197,3 +197,56 @@ main .container {
     backdrop-filter: blur(1.8px);
     display: none;
 }
+
+/* ConfiRM Dlete note */
+.confirm-del{
+    background-color: var(--almost-white);
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, 15%);
+    padding: 1.6rem 1.8rem;
+    border-radius: 8px;
+    border: 5px solid var(--deepest-orange);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm-del h2{
+    margin: 0 0 1.8rem;
+    font-weight: 100;
+    color: var(--deepest-orange);
+}
+
+.confirm-del button{
+    background-color: inherit;
+    border: none;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    margin: 0 2rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.confirm-del .confirm-del--yes{
+    color: var(--deep-orange);
+    font-weight: 100;
+}
+
+.confirm-del--yes:hover{
+    color: var(--deepest-orange);
+}
+
+.confirm-del .confirm-del--no{
+    background-color: var(--deep-orange);
+    padding: .5rem 2.7rem;
+    border-radius: 5px;
+    color: var(--almost-white);
+}
+
+.confirm-del--no:hover{
+    background-color: var(--deepest-orange);
+}

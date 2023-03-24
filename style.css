@@ -187,3 +187,12 @@ main .container {
     font-weight: 400;
     font-family: inherit;
 }
+
+/* OverLay */
+#overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #49494942;
+    backdrop-filter: blur(1.8px);
+}

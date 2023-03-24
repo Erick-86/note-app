@@ -24,17 +24,17 @@
               Click on the + icon to add a note
             </h1>
           </span>
-          <div class="add-note--icon">
+          <div class="add-note--icon" id="add-note-btn">
             <i class="fa-solid fa-plus"></i>
           </div>
         </div>
       </div>
-      <div class="add-note--form">
+      <div class="add-note--form" id="note--form">
         <div class="form-container">
           <div class="note-header--container">
             <div class="label-and-char--count">
               <label for="note-header">Heading</label>
-              <span>Max: <span class="header-count">20</span></span>
+              <span>Max: <span class="header-count" id="header-counter">20</span></span>
             </div>
             <input type="text" id="note-header" />
           </div>
@@ -42,7 +42,7 @@
           <div class="note-textarea-container">
             <div class="label-and-char--count">
               <label for="note-textarea">Your Note</label>
-              <span>Max: <span class="header-count">200</span></span>
+              <span>Max: <span class="note-chars-count" id="note-chars-count">200</span></span>
             </div>
             <textarea
               name="note-textarea"
@@ -54,8 +54,8 @@
           </div>
         </div>
         <div class="save-and-delete--btns">
-            <button class="save-btn">save</button>
-            <button class="delete-btn">delete</button>
+            <button class="save-btn" id="save-btn">save</button>
+            <button class="delete-btn" id="del-btn">delete</button>
         </div>
       </div>
     </main>

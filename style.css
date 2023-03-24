@@ -118,7 +118,7 @@ main .container {
 
 .note-header--container input {
   padding: 0.4rem 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   font-family: inherit;
   background-color: var(--almost-white);
@@ -126,6 +126,7 @@ main .container {
   border-radius: 3px;
   transition: 0.3s ease;
   margin-bottom: 2rem;
+  font-weight: 500;
 }
 
 .note-header--container input:focus {
@@ -138,13 +139,14 @@ main .container {
   resize: none;
   border: 2px solid var(--pale-orange);
   background-color: var(--almost-white);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: inherit;
   text-transform: capitalize;
   padding: 0.3rem 0.5rem;
   transition: 0.3s ease;
   border-radius: 3px;
   box-sizing: border-box;
+  font-weight: 100;
 }
 
 .note-textarea-container textarea:focus {

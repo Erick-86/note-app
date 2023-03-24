@@ -14,15 +14,6 @@ const noteForms = document.getElementById("note--form");
 //Header counter
 const headerCounter = document.getElementById("header-counter");
 
-//Note header input
-const noteHeader = document.getElementById("note-header");
-
-//Note Characters counts
-const noteCharsCount = document.getElementById("note-chars-count");
-
-//Note textarea
-const noteTextarea = document.getElementById("note-textarea");
-
 //Save and Delete btns
 const saveBtn = document.getElementById("save-btn"),
   delBtn = document.getElementById("del-btn");
@@ -52,19 +43,66 @@ function confirmDelete() {
 }
 
 //Confirm Delete (yes)
-confirmDelCont.addEventListener("click", deleteNote)
+confirmDelCont.addEventListener("click", deleteNote);
 
 function deleteNote() {
-    confirmDelModal.style.display = "none";
-    confirmDelOverlay.style.display = "none";
-    overlay.style.display = "none"
-    noteForms.classList.remove("show-modal");
+  confirmDelModal.style.display = "none";
+  confirmDelOverlay.style.display = "none";
+  overlay.style.display = "none";
+  noteForms.classList.remove("show-modal");
 }
 
 //Confirm Delete (no)
 confirmDelCanc.addEventListener("click", cancDeleteNote);
 
 function cancDeleteNote() {
-    confirmDelModal.style.display = "none";
-    confirmDelOverlay.style.display = "none";
+  confirmDelModal.style.display = "none";
+  confirmDelOverlay.style.display = "none";
 }
+
+//Note Header Limit
+const noteHeader = document.getElementById("note-header");
+
+noteHeader.addEventListener("input", () => {
+    let noteHeaderLimit = noteHeader.maxLength;
+    let inputChars = noteHeader.value.length
+    console.log(inputChars)
+    
+     if (inputChars < 0) {
+         noteHeaderLimit - inputChars;
+     }
+
+    let charLentgh = noteHeaderLimit - inputChars
+    
+     headerCounter.textContent = charLentgh;
+
+})
+
+//Note Characters counts
+const noteCharsCount = document.getElementById("note-chars-count");
+
+//Note textarea
+const noteTextarea = document.getElementById("note-textarea");
+
+noteTextarea.addEventListener("input", () => {
+    let noteLimit = noteTextarea.maxLength;
+    let inputChars = noteTextarea.value.length
+    
+    if (inputChars < 0) {
+        noteLimit - inputChars;
+    }
+
+    let charLentgh = noteLimit - inputChars
+    
+    noteCharsCount.textContent = charLentgh;
+
+})
+
+// //Adding a note
+// let notesAdded = [];
+
+// saveBtn.addEventListener("click", addNewNote);
+
+// function addNewNote() {
+    
+// }

@@ -31,5 +31,6 @@ addNoteBtn.addEventListener("click", addNewNoteModal)
 
 function addNewNoteModal() {
     noteForms.classList.add('show-modal')
+    overlay.style.display = "block"
 }
 

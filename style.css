@@ -66,4 +66,11 @@ main .container {
   justify-content: center;
   border-radius: 50%;
   cursor: pointer;
+  transition: .2s ease;
+}
+
+.add-note--icon:hover{
+    color: var(--deep-orange);
+    transform: scale(1.1);
+    background-color: var(--pale-orange);
 }

@@ -3,7 +3,7 @@
 //Bg Overlay
 //Confirm delete overlay
 const overlay = document.getElementById("overlay"),
-      confirmDelOverlay = document.getElementById("confirm-del-overlay")
+  confirmDelOverlay = document.getElementById("confirm-del-overlay");
 
 //Btn to add new note
 const addNoteBtn = document.getElementById("add-note-btn");
@@ -30,6 +30,9 @@ const saveBtn = document.getElementById("save-btn"),
 //Confirm delete modal
 const confirmDelModal = document.getElementById("confirm-del");
 
+//Confirming delet btns
+const confirmDelCont = document.getElementById("confirm-del--cont"),
+  confirmDelCanc = document.getElementById("confirm-del--canc");
 
 //Open Note forms when the (+) icon is click
 addNoteBtn.addEventListener("click", addNewNoteModal);
@@ -43,7 +46,17 @@ function addNewNoteModal() {
 delBtn.addEventListener("click", confirmDelete);
 
 function confirmDelete() {
-    confirmDelModal.style.display = "block";
-    confirmDelOverlay.style.display = "block"
-    confirmDelOverlay.style.zIndex = 1
+  confirmDelModal.style.display = "block";
+  confirmDelOverlay.style.display = "block";
+  confirmDelOverlay.style.zIndex = 1;
+}
+
+//Confirm Delete (yes)
+confirmDelCont.addEventListener("click", deleteNote)
+
+function deleteNote() {
+    confirmDelModal.style.display = "none";
+    confirmDelOverlay.style.display = "none";
+    overlay.style.display = "none"
+    noteForms.classList.remove("show-modal");
 }

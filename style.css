@@ -1,28 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
-:root{
-    --very-pale-orange: #FFF5EC;
-    --pale-orange: #FDE5D8;
-    --orange: #F3712B;
-    --deep-orange: #F3712B;
-    --deepest-orange: #F26418;
-    --almost-white: #FFF8F1;
-    --pure-white: #ffffff;
-    --alomost-black: #242323;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+:root {
+  --very-pale-orange: #fff5ec;
+  --pale-orange: #fde5d8;
+  --orange: #f3712b93;
+  --deep-orange: #f3712b;
+  --deepest-orange: #f26418;
+  --almost-white: #fff8f1;
+  --pure-white: #ffffff;
+  --alomost-black: #242323;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    list-style: none;
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-body{
-    background-color: var(--very-pale-orange);
-    overflow: hidden;
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+body {
+  background-color: var(--very-pale-orange);
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  background-color: var(--very-pale-orange);
+  border: 3px solid var(--pale-orange);
+  width: 30rem;
+  height: 30rem;
+  border-radius: 15px;
+  color: var(--orange);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main .main-container {
+  height: inherit;
+  padding: 20rem 0;
+}
+
+main .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container span {
+  text-align: center;
+  font-size: 1rem;
+  margin: 3rem 0 3rem;
+}
+
+.container .add-note--icon {
+  font-size: 11rem;
+  border: 0.8rem solid;
+  height: 8rem;
+  width: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
 }

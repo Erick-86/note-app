@@ -189,7 +189,8 @@ main .container {
 }
 
 /* OverLay */
-#overlay{
+#overlay,
+#confirm-del-overlay{
     position: absolute;
     height: 100%;
     width: 100%;
@@ -200,6 +201,10 @@ main .container {
 
 /* ConfiRM Dlete note */
 .confirm-del{
+    display: none;
+}
+
+.confirm-del-container{
     background-color: var(--almost-white);
     position: absolute;
     top: 25%;

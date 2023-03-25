@@ -44,7 +44,7 @@ delBtn.addEventListener("click", confirmDelete);
 function confirmDelete() {
   confirmDelModal.style.display = "block";
   confirmDelOverlay.style.display = "block";
-  confirmDelOverlay.style.zIndex = 2;
+  confirmDelOverlay.style.zIndex = 3;
 }
 
 //Confirm Delete (yes)

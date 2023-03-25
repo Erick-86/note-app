@@ -250,10 +250,10 @@ main .container {
 
 .delete-or-yes--btns {
   color: var(--deep-orange);
-  font-weight: 100;
+  font-weight: 300;
   background-color: inherit;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-transform: capitalize;
   cursor: pointer;
   transition: 0.3s ease;

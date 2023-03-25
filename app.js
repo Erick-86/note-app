@@ -138,7 +138,8 @@ function saveNote() {
   noteList.classList.add("note-list");
   editAndDelBtns.classList.add("btns-container");
   editBtn.classList.add("edit-btn");
-  delBtn.classList.add("del-btn");
+    delBtn.classList.add("del-btn");
+    editAndDelBtnsContainer.classList.add("btns-main-container");
 
   //Btns text contents
   editBtn.innerText = "edit";

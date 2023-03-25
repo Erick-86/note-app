@@ -140,4 +140,7 @@ function saveNote() {
   //Removing the overlay
   overlay.style.display = "none";
 
+  //Note header and textarea values set to empty
+  noteHeader.value = "";
+  noteTextarea.value = "";
 }

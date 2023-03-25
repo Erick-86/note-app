@@ -133,6 +133,10 @@ function saveNote() {
   const editBtn = document.createElement("button");
   const delBtn = document.createElement("button");
 
+  //Giving the btns classes
+  editBtn.classList.add("edit-btn");
+  delBtn.classList.add("del-btn");
+
   //Btns text contents
   editBtn.innerText = "edit";
   delBtn.innerText = "Delete";

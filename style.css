@@ -35,9 +35,6 @@ body {
   height: 30rem;
   border-radius: 15px;
   color: var(--orange);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 
 .main-container .add-note-container{

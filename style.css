@@ -161,8 +161,13 @@ main .container {
   margin-top: 1rem;
 }
 
-.save-btn{
+.save-btn:disabled{
     cursor: not-allowed !important;
+    background-color: #ff9860 !important;
+}
+
+.save-btn:disabled:hover{
+    background-color: #ff9860 !important;
 }
 
 .save-btn.allow-save-btn{

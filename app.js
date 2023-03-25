@@ -135,6 +135,7 @@ function saveNote() {
   const delBtn = document.createElement("button");
 
   //Giving the btns classes
+  noteList.classList.add("note-list");
   editAndDelBtns.classList.add("btns-container");
   editBtn.classList.add("edit-btn");
   delBtn.classList.add("del-btn");

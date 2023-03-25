@@ -154,7 +154,7 @@ main .container {
 /* Note  h2 and p*/
 .notes-list-container li h2{
     color: var(--deepest-orange);
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-weight: 500;
     text-transform: capitalize;
     position: relative;
@@ -165,7 +165,7 @@ main .container {
     -webkit-box-orient: vertical;
     box-sizing: border-box;
     display: -webkit-box;
-    height: 30px;
+    height: 28px;
     overflow: hidden;
     word-break: break-word;
 }

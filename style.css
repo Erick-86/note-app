@@ -118,6 +118,7 @@ main .container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
 }
 
 .add-new-note h3{
@@ -159,16 +160,38 @@ main .container {
     position: relative;
     padding: 0 0 0.4rem 0;
     width: fit-content;
+    word-wrap: break-word;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    box-sizing: border-box;
+    display: -webkit-box;
+    height: 30px;
+    overflow: hidden;
+    word-break: break-word;
 }
 
 .notes-list-container li h2::before{
     content: '';
     width: 50%;
     height: 5px;
-    background-color: red;
+    background-color: var(--deepest-orange);
     position: absolute;
     z-index: 0;
     bottom: 0;
+}
+
+.notes-list-container li p{
+    font-size: 1.1rem;
+    width: fit-content;
+    word-wrap: break-word;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    box-sizing: border-box;
+    display: -webkit-box;
+    height: 7rem;
+    overflow: hidden;
+    word-break: break-word;
+    padding: 0.6rem 0;
 }
 
 /* Add note Forms */
@@ -186,7 +209,7 @@ main .container {
   position: absolute;
   top: 0;
   left: 50%;
-  z-index: 1;
+  z-index: 2;
   transform: translate(-50%, 15%);
 }
 
@@ -304,7 +327,7 @@ main .container {
   background-color: #49494942;
   backdrop-filter: blur(1.8px);
   display: none;
-  z-index: 1;
+  z-index: 2;
 }
 
 /* ConfiRM Dlete note */
@@ -325,7 +348,7 @@ main .container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+  z-index: 3;
 }
 
 .confirm-del h2 {

@@ -45,7 +45,6 @@ body {
     display: block;
     position: sticky;
     top: 0;
-    z-index: 8;
     height: 1rem;
     width: 100%;
     background-color: inherit;
@@ -163,7 +162,7 @@ main .container {
   position: absolute;
   top: 0;
   left: 50%;
-  /* margin: auto; */
+  z-index: 1;
   transform: translate(-50%, 15%);
 }
 
@@ -281,6 +280,7 @@ main .container {
   background-color: #49494942;
   backdrop-filter: blur(1.8px);
   display: none;
+  z-index: 1;
 }
 
 /* ConfiRM Dlete note */

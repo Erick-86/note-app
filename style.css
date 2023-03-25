@@ -53,7 +53,6 @@ body {
     margin: auto;
     width: inherit;
     height: inherit;
-    display: none;
 }
 
 main .container {
@@ -94,6 +93,10 @@ main .container {
 
 .add-note--icon i {
   width: 102px;
+}
+
+.main-container .notes-list{
+    display: none;
 }
 
 /* New note grid */

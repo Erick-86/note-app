@@ -173,4 +173,13 @@ function saveNote() {
   //Assigning the initial values when of the counters when a note is save
   noteCharsCount.innerText = 200;
   headerCounter.innerText = 20;
+
+  //Displaying notes when note list length is 0 or greater
+    const notesAdded = document.querySelectorAll(".note-list");
+    const addNoteContainer = document.getElementById("add-note-contain");
+    const notesListContainer = document.getElementById("notes_list");
+    if (notesAdded.length >= 1) {
+        addNoteContainer.style.display = "none"
+        notesListContainer.style.display = "block"
+  }
 }

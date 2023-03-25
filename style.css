@@ -41,6 +41,7 @@ body {
     margin: auto;
     width: inherit;
     height: inherit;
+    display: none;
 }
 
 main .container {
@@ -81,6 +82,13 @@ main .container {
 
 .add-note--icon i {
   width: 102px;
+}
+
+/* New note grid */
+.notes-list-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
 }
 
 /* Add note Forms */

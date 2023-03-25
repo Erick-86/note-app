@@ -6,7 +6,7 @@ const overlay = document.getElementById("overlay"),
   confirmDelOverlay = document.getElementById("confirm-del-overlay");
 
 //Btn to add new note
-const addNoteBtn = document.getElementById("add-note-btn");
+const addNoteBtn = document.querySelectorAll("#add-note-btn");
 
 //Note forms modal
 const noteForms = document.getElementById("note--form");
@@ -29,7 +29,9 @@ const confirmDelCont = document.getElementById("confirm-del--cont"),
 const noteHeader = document.getElementById("note-header");
 
 //Open Note forms when the (+) icon is click
-addNoteBtn.addEventListener("click", addNewNoteModal);
+for (let i = 0; i < addNoteBtn.length; i++) {
+  addNoteBtn[i].addEventListener("click", addNewNoteModal);
+}
 
 function addNewNoteModal() {
   noteForms.classList.add("show-modal");

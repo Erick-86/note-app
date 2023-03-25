@@ -194,6 +194,30 @@ main .container {
     padding: 0.6rem 0;
 }
 
+.notes-list-container li .btns-main-container{
+    display: none;
+}
+
+.note-list{
+    transition: .3s ease;
+}
+
+.note-list:hover {
+    border: var(--deep-orange) solid;
+    transform: scale(1.04);
+}
+
+.note-list:hover .btns-main-container{
+    display: block;
+}
+
+.notes-list-container li .btns-container{
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 /* Add note Forms */
 .add-note--form {
   background-color: var(--almost-white);

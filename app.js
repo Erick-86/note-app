@@ -72,7 +72,6 @@ function cancDeleteNote() {
 noteHeader.addEventListener("input", () => {
   let noteHeaderLimit = noteHeader.maxLength;
   let inputChars = noteHeader.value.length;
-  console.log(inputChars);
 
   if (inputChars < 0) {
     noteHeaderLimit - inputChars;

@@ -122,17 +122,22 @@ saveBtn.addEventListener("click", saveNote)
 
 
 function saveNote() {
+  let parentEl = document.getElementById("notes-list-container");
+  const noteList = document.createElement("li");
+  const noteBody = document.createElement("p");
+  const noteHead = document.createElement("h2");
 
-    let parentEl = document.getElementById("notes-list-container");
-    const noteList = document.createElement("li")
-    const noteBody = document.createElement("p");
-    const noteHead = document.createElement("h2")
-    
-    noteHead.innerText = noteHeader.value
-    noteBody.innerText = noteTextarea.value
+  noteHead.innerText = noteHeader.value;
+  noteBody.innerText = noteTextarea.value;
 
-    parentEl.appendChild(noteList)
-    noteList.appendChild(noteHead)
-    noteList.appendChild(noteBody);
+  parentEl.appendChild(noteList);
+  noteList.appendChild(noteHead);
+  noteList.appendChild(noteBody);
+
+  //Removing the modal
+  noteForms.classList.remove("show-modal");
+
+  //Removing the overlay
+  overlay.style.display = "none";
 
 }

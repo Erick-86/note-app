@@ -40,6 +40,12 @@ body {
   align-items: center;
 }
 
+.main-container .add-note-container{
+    margin: auto;
+    width: inherit;
+    height: inherit;
+}
+
 main .container {
   display: flex;
   align-items: center;

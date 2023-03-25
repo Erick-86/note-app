@@ -129,6 +129,7 @@ function saveNote() {
   const noteHead = document.createElement("h2");
 
   //Delete and Edit btns
+  const editAndDelBtnsContainer = document.createElement("div");
   const editAndDelBtns = document.createElement("div");
   const editBtn = document.createElement("button");
   const delBtn = document.createElement("button");
@@ -146,9 +147,10 @@ function saveNote() {
   parentEl.appendChild(noteList);
   noteList.appendChild(noteHead);
   noteList.appendChild(noteBody);
-  noteList.appendChild(editAndDelBtns);
+  noteList.appendChild(editAndDelBtnsContainer);
 
   //Appending the del nd edit btns in the div
+  editAndDelBtnsContainer.appendChild(editAndDelBtns);
   editAndDelBtns.appendChild(editBtn);
   editAndDelBtns.appendChild(delBtn);
 

@@ -128,14 +128,28 @@ function saveNote() {
   const noteBody = document.createElement("p");
   const noteHead = document.createElement("h2");
 
-  //Assigning the text contents of the h2 and p to note header and note body values
-  noteHead.innerText = noteHeader.value;
-  noteBody.innerText = noteTextarea.value;
+  //Delete and Edit btns
+  const editAndDelBtns = document.createElement("div");
+  const editBtn = document.createElement("button");
+  const delBtn = document.createElement("button");
+
+  //Btns text contents
+  editBtn.innerText = "edit";
+  delBtn.innerText = "Delete";
 
   //Appending the elements
   parentEl.appendChild(noteList);
   noteList.appendChild(noteHead);
   noteList.appendChild(noteBody);
+  noteList.appendChild(editAndDelBtns);
+
+  //Appending the del nd edit btns in the div
+  editAndDelBtns.appendChild(editBtn);
+  editAndDelBtns.appendChild(delBtn);
+
+  //Assigning the text contents of the h2 and p to note header and note body values
+  noteHead.innerText = noteHeader.value;
+  noteBody.innerText = noteTextarea.value;
 
   //Removing the modal
   noteForms.classList.remove("show-modal");

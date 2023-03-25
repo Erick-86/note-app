@@ -116,3 +116,23 @@ function enableSaveBtn() {
     saveBtn.classList.remove("allow-save-btn");
   }
 }
+
+//Adding new notes when the save btn is clicked
+saveBtn.addEventListener("click", saveNote)
+
+
+function saveNote() {
+
+    let parentEl = document.getElementById("notes-list-container");
+    const noteList = document.createElement("li")
+    const noteBody = document.createElement("p");
+    const noteHead = document.createElement("h2")
+    
+    noteHead.innerText = noteHeader.value
+    noteBody.innerText = noteTextarea.value
+
+    parentEl.appendChild(noteList)
+    noteList.appendChild(noteHead)
+    noteList.appendChild(noteBody);
+
+}

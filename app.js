@@ -118,18 +118,21 @@ function enableSaveBtn() {
 }
 
 //Adding new notes when the save btn is clicked
-saveBtn.addEventListener("click", saveNote)
-
+saveBtn.addEventListener("click", saveNote);
 
 function saveNote() {
   let parentEl = document.getElementById("notes-list-container");
+
+  //Creating li, p and h2 elements
   const noteList = document.createElement("li");
   const noteBody = document.createElement("p");
   const noteHead = document.createElement("h2");
 
+  //Assigning the text contents of the h2 and p to note header and note body values
   noteHead.innerText = noteHeader.value;
   noteBody.innerText = noteTextarea.value;
 
+  //Appending the elements
   parentEl.appendChild(noteList);
   noteList.appendChild(noteHead);
   noteList.appendChild(noteBody);

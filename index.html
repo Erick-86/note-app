@@ -19,7 +19,7 @@
     <div id="confirm-del-overlay"></div>
     <main>
       <div class="main-container">
-        <div class="add-note-container">
+        <div class="add-note-container" id="add-note-contain">
           <div class="container">
             <span>
               <h1>
@@ -32,14 +32,16 @@
             </div>
           </div>
         </div>
-        <ol class="notes-list-container" id="notes-list-container">
-          <li class="add-new-note" id="add-new-note">
-            <h3>Click the + icon to add a new note.</h3>
-            <button id="add-note-btn">
+        <div class="notes-list" id="notes_list">
+          <ol class="notes-list-container" id="notes-list-container">
+            <li class="add-new-note" id="add-new-note">
+              <h3>Click the + icon to add a new note.</h3>
+              <button id="add-note-btn">
                 <i class="fa-solid fa-plus"></i>
-            </button>
-          </li>
-        </ol>
+              </button>
+            </li>
+          </ol>
+        </div>
       </div>
       <div class="add-note--form" id="note--form">
         <div class="form-container">

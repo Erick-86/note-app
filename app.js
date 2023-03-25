@@ -57,6 +57,8 @@ function deleteNote() {
   noteTextarea.value = "";
   noteCharsCount.innerText = 200;
   headerCounter.innerText = 20;
+  saveBtn.disabled = true;
+  saveBtn.classList.remove("allow-save-btn");
 }
 
 //Confirm Delete (no)
@@ -105,13 +107,11 @@ noteTextarea.addEventListener("input", enableSaveBtn);
 noteHeader.addEventListener("input", enableSaveBtn);
 
 function enableSaveBtn() {
-    
-    if (noteHeader.value.length > 0 && noteTextarea.value.length > 0) {
-        saveBtn.disabled = false;
-        saveBtn.classList.add("allow-save-btn");
-    } else {
-        saveBtn.disabled = true;
-        saveBtn.classList.remove("allow-save-btn");
-    }
+  if (noteHeader.value.length > 0 && noteTextarea.value.length > 0) {
+    saveBtn.disabled = false;
+    saveBtn.classList.add("allow-save-btn");
+  } else {
+    saveBtn.disabled = true;
+    saveBtn.classList.remove("allow-save-btn");
+  }
 }
-

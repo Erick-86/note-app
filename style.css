@@ -104,12 +104,16 @@ main .container {
     grid-gap: 1rem;
 }
 
-.notes-list-container .add-new-note{
+.notes-list-container li{
     background-color: var(--very-pale-orange);
+    border: .2rem solid var(--pale-orange);
+    height: 10rem;
+    padding: 0.8rem;
+}
+
+.notes-list-container .add-new-note{
     position: sticky;
     top: 1rem;
-    padding: 0.8rem;
-    border: .2rem solid var(--pale-orange);
     border-radius: 3px;
     display: flex;
     flex-direction: column;

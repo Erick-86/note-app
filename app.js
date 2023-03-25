@@ -100,11 +100,18 @@ noteTextarea.addEventListener("input", () => {
   noteCharsCount.textContent = charLentgh;
 });
 
-// //Adding a note
-// let notesAdded = [];
+//Disabling the save btn if the header and the text value is 0
+noteTextarea.addEventListener("input", enableSaveBtn);
+noteHeader.addEventListener("input", enableSaveBtn);
 
-// saveBtn.addEventListener("click", addNewNote);
+function enableSaveBtn() {
+    
+    if (noteHeader.value.length > 0 && noteTextarea.value.length > 0) {
+        saveBtn.disabled = false;
+        saveBtn.classList.add("allow-save-btn");
+    } else {
+        saveBtn.disabled = true;
+        saveBtn.classList.remove("allow-save-btn");
+    }
+}
 
-// function addNewNote() {
-
-// }

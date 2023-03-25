@@ -35,6 +35,20 @@ body {
   height: 30rem;
   border-radius: 15px;
   color: var(--orange);
+  overflow-y: scroll;
+    padding: 0 13px;
+    position: relative;
+}
+
+.main-container::before {
+    content: "";
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 8;
+    height: 1rem;
+    width: 100%;
+    background-color: inherit;
 }
 
 .main-container .add-note-container{
@@ -89,6 +103,12 @@ main .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
+}
+
+.notes-list-container .add-new-note{
+    background-color: red;
+    position: sticky;
+    top: 1rem;
 }
 
 /* Add note Forms */

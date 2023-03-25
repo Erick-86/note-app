@@ -161,6 +161,14 @@ main .container {
   margin-top: 1rem;
 }
 
+.save-btn{
+    cursor: not-allowed !important;
+}
+
+.save-btn.allow-save-btn{
+    cursor: pointer !important;
+}
+
 .save-or-no--btns {
   background-color: var(--deep-orange) !important;
   border: none;

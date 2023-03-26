@@ -199,6 +199,11 @@ main .container {
 
 .notes-list-container li .btns-main-container{
     display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2.3rem;
 }
 
 .note-list{
@@ -215,12 +220,32 @@ main .container {
 }
 
 .notes-list-container li .btns-container{
-    background-color: red;
+    background: rgb(243,113,43);
+background: linear-gradient(0deg, rgba(243,113,43,1) 0%, rgba(243,113,43,0.29698375870069604) 47%, rgba(243,113,43,0) 100%);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    height: inherit;
 }
 
+.btns-container button{
+    background-color: inherit;
+    border: none;
+    text-transform: capitalize;
+    font-size: .95rem;
+    font-weight: 400;
+    font-family: inherit;
+    color: var(--alomost-black);
+    cursor: pointer;
+    padding: .05rem .4rem ;
+    transition: .3s ease;
+}
+
+.btns-container button:hover{
+    border: .11rem solid var(--deepest-orange);
+    border-radius: .15rem;
+
+}
 /* Add note Forms */
 .add-note--form {
   background-color: var(--almost-white);

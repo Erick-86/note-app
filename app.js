@@ -203,9 +203,27 @@ function saveNote() {
       noteHeader2Container.style.display = "block";
       noteHeader2.innerText = warnNoteHeader;
     });
-    }
-    
-    //Disable the save btn when a note is saved
-    saveBtn.disabled = true;
-    saveBtn.classList.remove("allow-save-btn");
+  }
+
+  //Disable the save btn when a note is saved
+  saveBtn.disabled = true;
+  saveBtn.classList.remove("allow-save-btn");
+
+  //Saving the Notes to the local storage
+  // Retrieve existing notes from local storage or initialize an empty array if it doesn't exist
+  let notesAddedList = localStorage.getItem("notes")
+    ? JSON.parse(localStorage.getItem("notes"))
+    : [];
+
+  // Add new note object to the array
+  const newNote = {
+    noteHeader: noteHead.innerText /* code to retrieve the note header */,
+    noteBody: noteBody.innerText /* code to retrieve the note body */,
+  };
+  notesAddedList.unshift(newNote);
+
+  // Convert the updated array to a JSON string and store it in local storage
+  const notesString = JSON.stringify(notesAddedList);
+  localStorage.setItem("notes", notesString);
+
 }

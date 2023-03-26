@@ -171,6 +171,7 @@ main .container {
     height: 28px;
     overflow: hidden;
     word-break: break-word;
+    line-height: 1.4;
 }
 
 .notes-list-container li h2::before{
@@ -194,7 +195,7 @@ main .container {
     height: 7rem;
     overflow: hidden;
     word-break: break-word;
-    padding: 0.6rem 0;
+    padding: 0.4rem 0;
 }
 
 .notes-list-container li .btns-main-container{

@@ -400,14 +400,32 @@ background: linear-gradient(0deg, rgba(243,113,43,1) 0%, rgba(243,113,43,0.29698
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   z-index: 3;
 }
 
 .confirm-del h2 {
-  margin: 0 0 1.8rem;
-  font-weight: 100;
+  margin: 0 0 .5rem;
+  font-weight: 500;
+  font-size: 1.5rem;
   color: var(--deepest-orange);
+}
+
+.note-header2-container{
+    font-size: 1.1rem;
+    color: var(--deep-orange);
+    display: none;
+}
+
+.note-header2-container span{
+    color: var(--deepest-orange);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.confirm-del-btns-container{
+    text-align: center;
+    margin-top: 1.5rem;
 }
 
 .confirm-del button {

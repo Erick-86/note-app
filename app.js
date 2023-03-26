@@ -28,6 +28,10 @@ const confirmDelCont = document.getElementById("confirm-del--cont"),
 //Note Header Limit
 const noteHeader = document.getElementById("note-header");
 
+//Note header on delete modal
+const noteHeader2Container = document.querySelector(".note-header2-container");
+const noteHeader2 = document.getElementById("note-header2");
+
 //Open Note forms when the (+) icon is click
 for (let i = 0; i < addNoteBtn.length; i++) {
   addNoteBtn[i].addEventListener("click", addNewNoteModal);
@@ -61,6 +65,7 @@ function deleteNote() {
   headerCounter.innerText = 20;
   saveBtn.disabled = true;
   saveBtn.classList.remove("allow-save-btn");
+  noteHeader2Container.style.display = "none";
 }
 
 //Confirm Delete (no)
@@ -69,6 +74,7 @@ confirmDelCanc.addEventListener("click", cancDeleteNote);
 function cancDeleteNote() {
   confirmDelModal.style.display = "none";
   confirmDelOverlay.style.display = "none";
+  noteHeader2Container.style.display = "none";
 }
 
 noteHeader.addEventListener("input", () => {
@@ -188,7 +194,18 @@ function saveNote() {
   //Each btn will trigger the confirm delete node
   for (let i = 0; i < notesAdded.length; i++) {
     const delAddedNoteBtn = notesAdded[i].querySelector(".del-btn");
+    let warnNoteHeader = notesAdded[i].querySelector("h2").innerText;
 
-    delAddedNoteBtn.addEventListener("click", confirmDelete);
-  }
+    delAddedNoteBtn.addEventListener("click", () => {
+      confirmDelete();
+
+      //Showing the note header on the confirm warning modal
+      noteHeader2Container.style.display = "block";
+      noteHeader2.innerText = warnNoteHeader;
+    });
+    }
+    
+    //Disable the save btn when a note is saved
+    saveBtn.disabled = true;
+    saveBtn.classList.remove("allow-save-btn");
 }

@@ -16,7 +16,7 @@ const headerCounter = document.getElementById("header-counter");
 
 //Save and Delete btns
 const saveBtn = document.getElementById("save-btn"),
-  delBtn = document.getElementById("del-btn");
+  delNoteBtn = document.getElementById("del-btn");
 
 //Confirm delete modal
 const confirmDelModal = document.getElementById("confirm-del");
@@ -39,7 +39,7 @@ function addNewNoteModal() {
 }
 
 //Confirming Delete
-delBtn.addEventListener("click", confirmDelete);
+delNoteBtn.addEventListener("click", confirmDelete);
 
 function confirmDelete() {
   confirmDelModal.style.display = "block";
@@ -175,11 +175,20 @@ function saveNote() {
   headerCounter.innerText = 20;
 
   //Displaying notes when note list length is 0 or greater
-    const notesAdded = document.querySelectorAll(".note-list");
-    const addNoteContainer = document.getElementById("add-note-contain");
-    const notesListContainer = document.getElementById("notes_list");
-    if (notesAdded.length >= 1) {
-        addNoteContainer.style.display = "none"
-        notesListContainer.style.display = "block"
+  const notesAdded = document.querySelectorAll(".note-list");
+  const addNoteContainer = document.getElementById("add-note-contain");
+  const notesListContainer = document.getElementById("notes_list");
+  if (notesAdded.length >= 1) {
+    addNoteContainer.style.display = "none";
+    notesListContainer.style.display = "block";
+  }
+
+  //Deleting notes
+  //Loop through the li elements to get their del btns
+  //Each btn will trigger the confirm delete node
+  for (let i = 0; i < notesAdded.length; i++) {
+    const delAddedNoteBtn = notesAdded[i].querySelector(".del-btn");
+
+    delAddedNoteBtn.addEventListener("click", confirmDelete);
   }
 }
